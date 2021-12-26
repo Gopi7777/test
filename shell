@@ -1,0 +1,76 @@
+Quotes:
+	Double Quotes:
+		Command
+		Wildcard
+		Variable
+		Eg:
+			echo "Hello World $whoami"
+			echo "Hello world $home"
+	Single quotes:
+Backslash:
+	Multiline command
+	Eg:
+		Ls \
+		Whoami \
+		Pwd
+Export command:
+	When we want the variable to be accessible from child process use export cmd.
+	Eg:
+		Parent process shell:
+			Sample="test"
+			Echo $Sample
+				Output: test
+		Child process
+		bash
+			Echo $Sample
+				Output: empty result
+		Use export cmd:
+		Parent process shell:
+			Export Sample="test"
+			Echo $Sample
+				Output: test
+		Child process
+		bash
+			Echo $Sample
+				Output: test
+Unset command:
+	Delete variable
+	Eg:
+	Sample="test"
+	Echo $sample
+		Test
+	Unset $sample
+	Echo $sample
+		Empty result
+User input:
+	read -p "Enter The Name: " username
+	echo $username
+	Read -p -s "Enter the password" password
+	echo $password
+
+Arithmetic operators:
+	$$(( expression ))
+		+-/%**
+		Eg:
+		Echo $((1+1))
+			Output: 2
+	Declare -i 
+		Declare -I int=100
+		echo $int
+			Out: 100
+	Readonly
+		Readonly variable2=100
+		Variable2 = 200
+		Error: variable2 readonly variable
+		
+	Variable existence check:
+		
+	
+		
+		 
+
+		
+	
+	
+	
+	
